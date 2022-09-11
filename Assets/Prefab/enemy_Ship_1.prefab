@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 605419978112694956}
   m_Layer: 0
   m_Name: enemy_Ship_1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,8 +99,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cc038d5e71bb344083ee1cf90520c65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemySpeed: 1
-  _enemyHealth: 1
+  _enemySpeed: 4
+  _enemyHealth: 2
+  PowerUps:
+  - {fileID: 5960731797733811577, guid: ac2964de256c94746ac628bd1b30bcfa, type: 3}
+  - {fileID: 5960731797733811577, guid: 351d5db5423270c419f6fac9174a5f63, type: 3}
 --- !u!58 &8287336516060391706
 CircleCollider2D:
   m_ObjectHideFlags: 0

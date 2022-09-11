@@ -12,6 +12,8 @@ public class GameController : MonoBehaviour
     public static GameController Instance;
     [SerializeField] GameObject  _ScoreText; 
     [SerializeField] GameObject  _GameOverText; 
+    [SerializeField] GameObject  _BonusEnemySpawner1; 
+    [SerializeField] GameObject  _BonusEnemySpawner2; 
     [SerializeField] bool _isGameOver = false; 
 
 
@@ -22,11 +24,8 @@ public class GameController : MonoBehaviour
     }
 
     void Start()
-    {
-        
-    }
+    {}
 
-    // Update is called once per frame
     void Update()
     {
         _ScoreText.GetComponent<TextMeshProUGUI>().text = "Score: "+ _score;
@@ -35,11 +34,17 @@ public class GameController : MonoBehaviour
         {
             SceneManager.LoadScene("Assets/Levels/Level_1.unity");
         }
+        CreateNewSpawner();
     }
 
     public void addScore(int value)
     {
         _score += value;
+    }
+
+    public int getScore()
+    {
+        return _score;
     }
 
     public void startGameOver()
@@ -48,4 +53,15 @@ public class GameController : MonoBehaviour
         _isGameOver = true;
     }
 
+    void CreateNewSpawner()
+    {
+        if(GameController.Instance._score > 200)
+        {
+            _BonusEnemySpawner1.SetActive(true);
+        }
+        if(GameController.Instance._score > 400)
+        {
+            _BonusEnemySpawner2.SetActive(true);
+        }
+    }
 }

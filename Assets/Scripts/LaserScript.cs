@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class LaserScript : MonoBehaviour
 {
-    [SerializeField] float _laserSpeed = 1f;
+    public float _laserSpeed = 1f;
+    public int _laserDamage = 1;
 
     // Start is called before the first frame update
     void Start()
     {
-       Destroy(gameObject,10);
+       Destroy(gameObject,5);
     }
 
     // Update is called once per frame
@@ -17,8 +18,8 @@ public class LaserScript : MonoBehaviour
     {
 
 
-        transform.position += new Vector3(0, Time.deltaTime * _laserSpeed,0);
-
+       transform.position += new Vector3(0, Time.deltaTime * _laserSpeed,0);
+       
 
     }
 

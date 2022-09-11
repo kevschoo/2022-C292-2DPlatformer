@@ -45,8 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemySpawnCooldown: 2
-  _enemyPreFab: {fileID: 1989426812643929432, guid: c3c57cee518fe9947b0dfb05265ad0e8, type: 3}
-  _enemyMaxSpawns: 10
   _xMin: 0
   _xMax: 0
   _YSpawn: 0
+  Enemies:
+  - {fileID: 1989426812643929432, guid: c3c57cee518fe9947b0dfb05265ad0e8, type: 3}
