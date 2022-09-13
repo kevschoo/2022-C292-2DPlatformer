@@ -32,7 +32,7 @@ public class GameController : MonoBehaviour
 
         if(Input.GetButtonDown("Submit") && _isGameOver)
         {
-            SceneManager.LoadScene("Assets/Levels/Level_1.unity");
+            SceneManager.LoadScene("Assets/Scenes/Level_1.unity");
         }
         CreateNewSpawner();
     }
